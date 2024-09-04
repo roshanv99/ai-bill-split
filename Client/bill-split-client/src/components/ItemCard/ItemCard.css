@@ -1,0 +1,111 @@
+.item-card-parent {
+  min-width: 18em;
+  height: 25em;
+  padding: 2%;
+  margin: 2%;
+  /* backdrop-filter: blur(17px) saturate(190%);
+  -webkit-backdrop-filter: blur(17px) saturate(190%);
+  background-color: rgba(255, 255, 255, 0.78); */
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  perspective: 1000px;
+}
+
+.item-card-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.item-card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-card-info-quantity {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card-info-quantity span {
+  text-align: center;
+}
+
+.item-card-info-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card-info-price span {
+  text-align: center;
+}
+
+.sub-heading {
+  font-weight: 600;
+}
+
+.item-card-contributers {
+  height: 7em;
+}
+
+.wiggle {
+  box-shadow: rgba(254, 160, 59, 0.8) 0 0 70px 0px;
+  transition: 0.5s;
+  animation: wiggle 1s infinite;
+}
+
+.item-card-contributers {
+  margin-top: 1em;
+}
+
+.contributer-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contributer-avatar {
+  flex-basis: content;
+  height: 4em;
+}
+
+.flipped-card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18em;
+    height: 27em;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: translateY(-1em) rotate(0deg);
+  }
+  85% {
+    transform: translateY(-1em) rotate(5deg);
+  }
+  95% {
+    transform: translateY(-1em) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(-1em) rotate(0deg);
+  }
+}

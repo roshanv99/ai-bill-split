@@ -1,0 +1,27 @@
+.avatar-container { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+    min-width: 3em;
+}
+
+.dangerousHTML svg {
+    border-radius: 100%;
+}
+
+.svg-object {
+    width: 5em;
+    height: 5em;
+}
+
+.avatar-name {
+    color: gray;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.skinTone {
+    fill:blue
+}

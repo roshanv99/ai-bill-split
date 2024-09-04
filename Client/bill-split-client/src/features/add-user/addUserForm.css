@@ -1,0 +1,273 @@
+/* Fonts imported form Goggle Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Jura:wght@700&family=Manrope:wght@400;500;600;700&family=Orbitron:wght@700&family=Oxygen:wght@400;700&family=Raleway:wght@400;700&display=swap");
+ :root {
+  --clr-blue: #003152;
+  --lexicon: #E7EAEA;
+} 
+
+.addUserForm {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  padding: 2%;
+  margin: 2%;
+  animation: addUserFormEnter 1.2s ease-in;
+}
+
+.form-heading {
+  width: 100%;
+  text-align: center;
+  color: gray;
+  animation: form-heading 0.7s ease-in-out 1.2s;
+  text-decoration: underline;
+}
+
+.form-level {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  justify-content: center;
+  padding-block: 2em;
+}
+
+.image-parent {
+  width: 10em;
+  border-radius: 100%;
+  margin-inline: 1%;
+  /* scale: 0.8; */
+  transition: 0.5s;
+}
+
+.image-parent:hover {
+  scale: 1;
+}
+
+.image-parent img {
+  border-radius: 100%;
+}
+
+.activeAvatar {
+  scale: 1.4;
+}
+
+.activeAvatar:hover {
+  scale: 1.4;
+}
+
+.inactiveAvatar {
+  width: 10em;
+  border-radius: 100%;
+  margin-inline: 0%;
+  transition: 0.5s;
+  scale: 0.8;
+}
+
+.inactiveAvatar::after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 10em;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+}
+
+.inactiveAvatar:hover {
+  scale: 0.8;
+}
+
+
+.colorToneCirle {
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 100%;
+  display: inline-block;
+  margin-inline: 1%;
+}
+
+.colorToneCirle:hover {
+  scale: 1.2;
+  transition: 0.5s;
+}
+
+.createAvatar {
+  /* height: 17em; */
+  display: flex;
+  flex-direction: column;
+}
+
+.editAvatar {
+  height: 24em;
+  animation: openEditAvatar 1s ease-in-out;
+}
+
+.avatar-customization {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2%;
+}
+
+.selectSkinTone {
+  display: flex;
+  flex-direction: column;
+  width: 18em;
+  animation: selectSkinTone 0.7s ease-in-out;
+}
+
+.removeSelectSkinTone {
+  display: flex;
+  flex-direction: column;
+  width: 18em;
+  animation: removeSelectSkinTone 0.7s ease-in-out;
+}
+
+.removeEditAvatar {
+  /* height: 17em; */
+  animation: removeEditAvatar 1s ease-in-out;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 15em;
+  height: 2.5em;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 0 15px;
+  border: 2px solid lightgray;
+  background: transparent;
+  color: gray;
+  outline: none;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.7s;
+}
+input:focus {
+  border: 2px solid #ffcc00;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 1em;
+  padding: 0 2px;
+  background: #fff;
+}
+
+.btn {
+  font-family: "Comfortaa", cursive;
+  font-size: 1rem;
+  padding: 0.85em 1.345em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  margin: 2%;
+  letter-spacing: 2px;
+  cursor: pointer;
+  max-width: 10rem;
+}
+
+.white-stripes {
+  background: transparent;
+  border-top: 4px solid gray;
+  border-bottom: 4px solid gray;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  transition: all 0.5s ease-in-out;
+}
+.white-stripes:hover {
+  background: gray;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  color: white;
+  transform: translate(0px, -5px);
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 75%;               
+    background-color:lightgray;
+    height: 1px;
+
+}
+
+@keyframes openEditAvatar {
+  from {
+    height: 17em;
+  }
+  to {
+    /* height: 24em; */
+  }
+}
+
+@keyframes removeEditAvatar {
+  from {
+    height: 24em;
+  }
+  to {
+    height: auto;
+  }
+}
+
+@keyframes selectSkinTone {
+  from {
+    transform: translateX(-20em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes removeSelectSkinTone {
+  from {
+    left: 0%;
+    opacity: 0;
+  }
+  to {
+    left: -20%;
+    opacity: 1;
+  }
+}
+
+@keyframes addUserFormEnter {
+  from {
+    transform: translateX(100em);
+  }
+  to {
+    transform: translateX(0em);
+  }
+}
+
+@keyframes form-heading {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,42 @@
+.scrollable-user-deck{
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(191, 187, 187, 0.75);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    /* width: 98vw; */
+    margin-bottom: 0;
+    padding: 0%;
+    overflow-x: auto;
+}
+
+.enterAvatar {
+    animation: enterAvatar 0.5s ease-in-out;
+}
+
+.user-list {
+    animation: user-list-enter 0.8s ease-in-out;  
+}
+
+.avatar-parent {
+    padding-inline: 1%;
+}
+
+@keyframes enterAvatar {
+    from {
+        transform: translateX(50vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes user-list-enter {
+    from {
+        transform: translateY(50vw);
+    }
+    to {
+        transform: translateY(0vw);
+    }
+}

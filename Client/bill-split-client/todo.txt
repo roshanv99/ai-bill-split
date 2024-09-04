@@ -1,0 +1,6 @@
+1. Upload Bill
+2. Add Users
+3. Finish Adding Users
+4. Show 1 item at a time
+5. Drag and Drop User to item
+6. Generate Bill

@@ -1,0 +1,12 @@
+.slideDiv {
+    animation: slideInto 0.7s ease-in-out;
+}
+
+@keyframes slideInto {
+    from {
+        transform: translateX(30em);
+    }  
+    to {
+        transform: translateX(0);
+    }
+}
