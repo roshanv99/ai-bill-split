@@ -24,7 +24,8 @@ build/
 .vscode/
 
 .properties
+/resources
 
-.gcp_serviceAccount.json
+gcp_serviceAccount.json
 
 

@@ -8,6 +8,7 @@ import org.roshanv99.utils.StringToJSON;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -16,13 +17,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Properties;
 
 @Service
 
 public class GPT {
+    Properties properties = new Properties();
+
     static ConfigLoader configLoader = new ConfigLoader(".properties");
 //    private static final String API_KEY = configLoader.getProperty("openai-key");
-    private static final String API_KEY = "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";
+    @Value("${OPENAPI_KEY}")
+    String API_KEY = "";
 
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
     private static final String MODEL = "gpt-3.5-turbo";
