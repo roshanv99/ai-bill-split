@@ -1,0 +1,8 @@
+org/roshanv99/utils/ConfigLoader.class
+org/roshanv99/utils/StringToJSON.class
+org/roshanv99/service/ai/VisionToText.class
+org/roshanv99/controller/BillController.class
+org/roshanv99/Main.class
+org/roshanv99/dto/Item.class
+org/roshanv99/service/ai/GPT.class
+org/roshanv99/controller/BillController$1.class

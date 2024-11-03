@@ -25,13 +25,17 @@ const Bill = (props:BillParams) => {
             <tbody>
                 {finalBill && Array.from(finalBill.entries()).map((entry,index) => {
                     const [key, value] = entry;
-                    {value.portion.map((ele,index2) => {
-                        return (<></>)
-                    });
-                    }
-                    return(<></>);
-                    
-
+                    return(<tr>
+                        <td>
+                            <label htmlFor="">{key}</label>
+                            <div className="">
+                                {value.portion.map((ele,index2) => {
+                                    return (<label>{ele}</label>)
+                                })}
+                            </div>
+                        </td>
+                        <td>{value.amount}</td>
+                    </tr>);
                 })}
         
             </tbody>
